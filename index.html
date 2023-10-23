@@ -3,4 +3,5 @@
 <script>
   var param = /[&?]path=([^&]+)/.exec(location.search);
   param = param ? param[1].replace(/"/g, '&quot;') : '';
+  console.log(param);
 </script>
