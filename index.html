@@ -1,7 +1,9 @@
 <h1 id="test">Test</h1>
- <param name="src" value="<%=Request.QueryString["path"]%>" />
+ <param name="src" value="" id="param-path" />
 <script>
-  var param = /[&?]path=([^&]+)/.exec(location.search);
-  param = param ? param[1].replace(/"/g, '&quot;') : '';
-  console.log(param);
+
+var param = /[&?]path=([^&]+)/.exec(location.search);
+if (param)
+    document.getElementById('param-path').value = param[1];
+</script>​</body>
 </script>
